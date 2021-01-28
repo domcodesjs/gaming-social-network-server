@@ -1,20 +1,16 @@
-const {
-  DATABASE_URL,
-  TEST_DATABASE_URL,
-  LOCAL_DATABASE_URL
-} = require('./config');
+const { TEST_DB_URL, LOCAL_DB_URL, DB_URL } = require('./config');
 
 module.exports = {
   development: {
     client: 'pg',
-    connection: LOCAL_DATABASE_URL
+    connection: LOCAL_DB_URL
   },
   production: {
     client: 'pg',
-    connection: DATABASE_URL
+    connection: DB_URL
   },
   test: {
     client: 'pg',
-    connection: TEST_DATABASE_URL
+    connection: TEST_DB_URL
   }
 };
