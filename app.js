@@ -13,10 +13,10 @@ app.use(
   })
 );
 app.use(helmet());
-if (process.env.NODE_ENV !== 'production') {
-  const morgan = require('morgan');
-  app.use(morgan('tiny'));
-}
+// if (process.env.NODE_ENV !== 'production') {
+//   const morgan = require('morgan');
+//   app.use(morgan('tiny'));
+// }
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
